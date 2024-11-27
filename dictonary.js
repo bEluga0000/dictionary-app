@@ -74,11 +74,11 @@ const handelSearchButton = async () => {
                             let eleMain = document.createElement("p")
                             eleMain.textContent = definations[j].definition
                             speechEle.appendChild(eleMain)
-                            // if (eleMain[j].example) {
-                            //     let eleSen = document.createElement("p")
-                            //     eleSen.textContent = eleMain[j].example
-                            //     speechEle.appendChild(eleSen)
-                            // }
+                            if (definations[j].example) {
+                                let eleSen = document.createElement("p")
+                                eleSen.textContent = `Example: ${definations[j].example}`
+                                speechEle.appendChild(eleSen)
+                            }
                             speechOl.appendChild(speechEle)
                         }
                         dictSpeech.appendChild(speechOl)
